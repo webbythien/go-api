@@ -1,0 +1,23 @@
+version: '3.1'
+services:
+  services-server:
+    image: adminesollab/dev-repository:lido-core-api-dev-latest
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 5000:5000
+    command: ./build/execute server
+
+  services-workers:
+    image: adminesollab/dev-repository:lido-core-api-dev-latest
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    command: ./build/execute worker core_api_queue
