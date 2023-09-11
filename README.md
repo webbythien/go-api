@@ -14,10 +14,6 @@ To run Go API, you need the following:
 
 1. Clone the source code from the repository:
 
-```bash
-git clone git@gitlab.rinznetwork.com:factory/backend/go-api.git
-cd go-api
-```
 
 2. Install the required dependencies
 ```bash
